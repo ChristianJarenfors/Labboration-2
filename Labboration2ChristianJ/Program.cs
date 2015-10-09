@@ -8,23 +8,26 @@ namespace Labboration2ChristianJ
 {
     class Program
     {
+        private static int jj = 0,ii=0;
         public static int value = 0;
         public static string svar= ""; 
         static void Main(string[] args)
         {
             //Uppgift 1
-            Uppgift1_1_WaterBoil();
-            Uppgift1_2_PekkasPonnys();
-            Uppgift1_3_GårDetAttBada();
-            Uppgift2_1_FizzBuzz();
-            Uppgift2_2_KortLeken();
-            Uppgift3_1_Quack();
-            
+            //Uppgift1_1_WaterBoil();
+            //Uppgift1_2_PekkasPonnys();
+            //Uppgift1_3_GårDetAttBada();
+            //Uppgift2_1_FizzBuzz();
+            //Uppgift2_2_KortLeken();
+            //Uppgift3_1_Quack();
+            //Uppgift3_2_MjauMachine();
+            Uppgift4_1_Box_a();
+            Uppgift4_1_Box_b();
+            Uppgift4_1_Box_c();
             Console.ReadKey();
         }
 
         
-
 
         #region Uppgift 1.1 Metoder
 
@@ -186,7 +189,7 @@ namespace Labboration2ChristianJ
         }
         #endregion
 
-        #region Uppgifter 3.1 Metoder
+        #region Uppgift 3.1 Metoder
         private static void Uppgift3_1_Quack()
         {
             svar = "quack";
@@ -204,6 +207,86 @@ namespace Labboration2ChristianJ
                 }
             }
         }
+        #endregion
+
+        #region Uppgift 3.2 Metoder
+        private static void Uppgift3_2_MjauMachine()
+        {
+            value = 1;
+            while(value!=0)
+            {
+                Console.Write("Hur många Mjau vill du ha? ");
+                int.TryParse(Console.ReadLine(), out value);
+                if (value != 0)
+                {
+                    for (int i = 0; i < value; i++)
+                    {
+                        Console.Write("Mjau ");
+                    }
+                    Console.WriteLine();
+                }
+                else {
+                    Console.WriteLine(":(");
+                }
+            }
+        }
+        #endregion
+
+        #region Uppgift 4.1 Metoder
+        private static void Menu()
+        {
+            Console.Write("Hur många rader vill du ha? ");
+            int.TryParse(Console.ReadLine(), out jj);
+            Console.Write("Hur många kolumner vill du ha? ");
+            int.TryParse(Console.ReadLine(), out ii);
+        }
+        #region a.
+        private static void Uppgift4_1_Box_a()
+        {
+            Menu();
+            for (int j = 0; j < jj; j++)
+            {
+                for (int i = 0; i < ii; i++)
+                {
+                    Console.Write("o");
+                }
+                Console.WriteLine();
+            }
+        }
+        private static void Uppgift4_1_Box_b()
+        {
+            Menu();
+            for (int j = 0; j < jj; j++)
+            {
+                for (int i = 0; i < (ii-j); i++)
+                {
+                    Console.Write("o");
+                }
+                Console.WriteLine();
+            }
+        }
+        private static void Uppgift4_1_Box_c()
+        {
+            Menu();
+            for (int j = 0; j < jj; j++)
+            {
+                for (int i = 0; i < ii; i++)
+                {
+                    if (i%2==0)
+                    {
+                        Console.Write("x");
+                    }
+                    else
+                    {
+                        Console.Write("o");
+                    }
+                    
+                }
+                Console.WriteLine();
+            }
+        }
+
+        #endregion
         #endregion
     }
 }
