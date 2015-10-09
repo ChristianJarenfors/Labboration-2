@@ -388,5 +388,11 @@ namespace Labboration2ChristianJ
         #endregion
 
         #endregion
+        private static void mainMenu()
+        {
+            Console.WriteLine("Vilket program vill du köra? ");
+           
+
+        }
     }
 }
