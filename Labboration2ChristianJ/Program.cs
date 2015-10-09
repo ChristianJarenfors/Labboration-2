@@ -9,14 +9,17 @@ namespace Labboration2ChristianJ
     class Program
     {
         public static int value = 0;
-          
+        public static string svar= ""; 
         static void Main(string[] args)
         {
             //Uppgift 1
             Uppgift1_1_WaterBoil();
             Uppgift1_2_PekkasPonnys();
             Uppgift1_3_GårDetAttBada();
-            Uppgift2_2_FizzBuzz();
+            Uppgift2_1_FizzBuzz();
+            Uppgift2_2_KortLeken();
+            Uppgift3_1_Quack();
+            
             Console.ReadKey();
         }
 
@@ -113,7 +116,7 @@ namespace Labboration2ChristianJ
         #endregion
 
         #region Uppgift 2.1 Metoder
-        private static void Uppgift2_2_FizzBuzz()
+        private static void Uppgift2_1_FizzBuzz()
         {
             for (int i = 0; i < 100; i++)
             {
@@ -129,6 +132,75 @@ namespace Labboration2ChristianJ
                         Console.Write("Buzz");
                     }
                     Console.WriteLine();
+                }
+            }
+        }
+        #endregion
+
+        #region Uppgift 2.2 Metoder
+        private static void Uppgift2_2_KortLeken()
+        {
+            string[] suits = new string[4] {"Hjärter","Klöver","Ruter","Spader" };
+            for (int i = 0; i <= 3; i++)
+            {
+                for (int j = 1; j <= 13; j++)
+                {
+                    Console.Write(suits[i]+ " ");
+                    if (j>10)
+                    {
+                        #region Klädswitch 
+                        switch (j)
+                        {
+                            default:
+                                {
+                                    break;
+                                }
+                            case 11:
+                                {
+                                    Console.WriteLine("Knekt");
+                                    break;
+                                }
+                            case 12:
+                                {
+                                    Console.WriteLine("Dam");
+                                    break;
+                                }
+                            case 13:
+                                {
+                                    Console.WriteLine("Kung");
+                                    break;
+                                }
+                        }
+                        #endregion
+                    }
+                    else if (j>1)
+                    {
+                        Console.WriteLine(j);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ess");
+                    }
+                }
+            }
+        }
+        #endregion
+
+        #region Uppgifter 3.1 Metoder
+        private static void Uppgift3_1_Quack()
+        {
+            svar = "quack";
+            while (svar=="quack")
+            {
+                Console.Write("quack? ");
+                svar = Console.ReadLine();
+                if (svar=="quack")
+                {
+                    Console.WriteLine("Quack, Quack!");
+                }
+                else
+                {
+                    Console.WriteLine("You are not a duck!");
                 }
             }
         }
