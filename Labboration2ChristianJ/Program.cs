@@ -13,17 +13,47 @@ namespace Labboration2ChristianJ
         public static string svar= ""; 
         static void Main(string[] args)
         {
-            //Uppgift 1
-            //Uppgift1_1_WaterBoil();
-            //Uppgift1_2_PekkasPonnys();
-            //Uppgift1_3_GårDetAttBada();
-            //Uppgift2_1_FizzBuzz();
-            //Uppgift2_2_KortLeken();
-            //Uppgift3_1_Quack();
-            //Uppgift3_2_MjauMachine();
+            //Selektion
+            Uppgift1_1_WaterBoil();
+            Uppgift1_2_PekkasPonnys();
+            Uppgift1_3_GårDetAttBada();
+            //Iteration-For
+            Uppgift2_1_FizzBuzz();
+            Uppgift2_2_KortLeken();
+            //Iteration-While
+            Uppgift3_1_Quack();
+            Uppgift3_2_MjauMachine();
+            //Valfri Loop
             Uppgift4_1_Box_a();
+            //oooo
+            //oooo
+            //oooo
+            //oooo
             Uppgift4_1_Box_b();
+            //oooo
+            //ooo
+            //oo
+            //o
             Uppgift4_1_Box_c();
+            //xoxo
+            //xoxo
+            //xoxo
+            //xoxo
+            Uppgift4_1_Box_d();
+            //xxxx
+            //oooo
+            //xxxx
+            //oooo
+            Uppgift4_1_Box_e();
+            //xooo
+            //oxoo
+            //ooxo
+            //ooox
+            Uppgift4_1_Box_f();
+            //ooox
+            //ooxo
+            //oxoo
+            //xooo
             Console.ReadKey();
         }
 
@@ -253,6 +283,8 @@ namespace Labboration2ChristianJ
                 Console.WriteLine();
             }
         }
+        #endregion
+        #region b.        
         private static void Uppgift4_1_Box_b()
         {
             Menu();
@@ -265,6 +297,8 @@ namespace Labboration2ChristianJ
                 Console.WriteLine();
             }
         }
+        #endregion
+        #region c.
         private static void Uppgift4_1_Box_c()
         {
             Menu();
@@ -285,8 +319,74 @@ namespace Labboration2ChristianJ
                 Console.WriteLine();
             }
         }
-
         #endregion
+        #region d.
+        private static void Uppgift4_1_Box_d()
+        {
+            Menu();
+            for (int j = 0; j < jj; j++)
+            {
+                for (int i = 0; i < ii; i++)
+                {
+                    if (j % 2 == 0)
+                    {
+                        Console.Write("x");
+                    }
+                    else
+                    {
+                        Console.Write("o");
+                    }
+
+                }
+                Console.WriteLine();
+            }
+        }
+        #endregion
+        #region e.
+        private static void Uppgift4_1_Box_e()
+        {
+            Menu();
+            for (int j = 0; j < jj; j++)
+            {
+                for (int i = 0; i < ii; i++)
+                {
+                    if (i==j)
+                    {
+                        Console.Write("x");
+                    }
+                    else
+                    {
+                        Console.Write("o");
+                    }
+
+                }
+                Console.WriteLine();
+            }
+        }
+        #endregion
+        #region f.
+        private static void Uppgift4_1_Box_f()
+        {
+            Menu();
+            for (int j = 0; j < jj; j++)
+            {
+                for (int i = 0; i < ii; i++)
+                {
+                    if ((i+1)==(ii- j))
+                    {
+                        Console.Write("x");
+                    }
+                    else
+                    {
+                        Console.Write("o");
+                    }
+
+                }
+                Console.WriteLine();
+            }
+        }
+        #endregion
+
         #endregion
     }
 }
