@@ -10,50 +10,54 @@ namespace Labboration2ChristianJ
     {
         private static int jj = 0,ii=0;
         public static int value = 0;
-        public static string svar= ""; 
+        public static string svar= "";
+        public static int menuChoice1 = 0;
+        public static int menuChoice2 = 0;
         static void Main(string[] args)
         {
-            //Selektion
-            Uppgift1_1_WaterBoil();
-            Uppgift1_2_PekkasPonnys();
-            Uppgift1_3_GårDetAttBada();
-            //Iteration-For
-            Uppgift2_1_FizzBuzz();
-            Uppgift2_2_KortLeken();
-            //Iteration-While
-            Uppgift3_1_Quack();
-            Uppgift3_2_MjauMachine();
-            //Valfri Loop
-            Uppgift4_1_Box_a();
-            //oooo
-            //oooo
-            //oooo
-            //oooo
-            Uppgift4_1_Box_b();
-            //oooo
-            //ooo
-            //oo
-            //o
-            Uppgift4_1_Box_c();
-            //xoxo
-            //xoxo
-            //xoxo
-            //xoxo
-            Uppgift4_1_Box_d();
-            //xxxx
-            //oooo
-            //xxxx
-            //oooo
-            Uppgift4_1_Box_e();
-            //xooo
-            //oxoo
-            //ooxo
-            //ooox
-            Uppgift4_1_Box_f();
-            //ooox
-            //ooxo
-            //oxoo
-            //xooo
+
+            mainMenu();
+            ////Selektion
+            //Uppgift1_1_WaterBoil();
+            //Uppgift1_2_PekkasPonnys();
+            //Uppgift1_3_GårDetAttBada();
+            ////Iteration-For
+            //Uppgift2_1_FizzBuzz();
+            //Uppgift2_2_KortLeken();
+            ////Iteration-While
+            //Uppgift3_1_Quack();
+            //Uppgift3_2_MjauMachine();
+            ////Valfri Loop
+            //Uppgift4_1_Box_a();
+            ////oooo
+            ////oooo
+            ////oooo
+            ////oooo
+            //Uppgift4_1_Box_b();
+            ////oooo
+            ////ooo
+            ////oo
+            ////o
+            //Uppgift4_1_Box_c();
+            ////xoxo
+            ////xoxo
+            ////xoxo
+            ////xoxo
+            //Uppgift4_1_Box_d();
+            ////xxxx
+            ////oooo
+            ////xxxx
+            ////oooo
+            //Uppgift4_1_Box_e();
+            ////xooo
+            ////oxoo
+            ////ooxo
+            ////ooox
+            //Uppgift4_1_Box_f();
+            ////ooox
+            ////ooxo
+            ////oxoo
+            ////xooo
             Console.ReadKey();
         }
 
@@ -390,9 +394,221 @@ namespace Labboration2ChristianJ
         #endregion
         private static void mainMenu()
         {
-            Console.WriteLine("Vilket program vill du köra? ");
-           
+            while ((0<=menuChoice1 && menuChoice1 <=4))
+            {
+                menuChoice1 = miniMain(menuChoice1);
+            }
+                
+            
+            
+        }
+        private static int miniMain(int val1)
+        {
+            Console.WriteLine("Vilket program vill du köra? Avsluta med #");
+            Console.WriteLine("#1. Selektion (3 Options)");
+            if (val1 == 1)
+            {
+                Console.WriteLine("\t#1.1 Does the water boil?");
+                Console.WriteLine("\t#1.2 Pekkas Ponny");
+                Console.WriteLine("\t#1.3 Can we take a bath?");
+            }
+            Console.WriteLine("#2. Iteration-For (2 Options)");
+            if (val1 == 2)
+            {
+                Console.WriteLine("\t#2.1 FizzBuzz!");
+                Console.WriteLine("\t#2.2 Deck of Cards");
+            }
+            Console.WriteLine("#3. Iteration-While (2 Options");
+            if (val1 == 3)
+            {
+                Console.WriteLine("\t#3.1 Quack");
+                Console.WriteLine("\t#3.2 MjauMachine");
+            }
+            Console.WriteLine("#4. Valfri Loop (6 Options)");
+            if (val1 == 4)
+            {
+                Console.WriteLine("\t#4.a Even");
+                Console.WriteLine("\t#4.b");
+                Console.WriteLine("\t#4.c x kolumns");
+                Console.WriteLine("\t#4.d x rows");
+                Console.WriteLine("\t#4.e Backslash");
+                Console.WriteLine("\t#4.f Slash");
+            }
+            if (val1 == 0)
+            {
+                Console.Write("Vilken grupp vill du gå in i? ");
+                //Console.Write(val1 + ".");
+                int.TryParse(Console.ReadLine(), out val1);
+                Console.Clear();
+            }
+            else
+            {
+                Console.Write("Vilken undermeny vill du gå in i? {0}:",val1);
+                choiceRunner(val1,abcdef(Console.ReadLine()));
+                Console.ReadKey();
+                Console.Clear();
+                val1 = 0;
+            }
+            return val1;
+        }
+        private static void choiceRunner(int val1, int val2)
+        {
+            switch (val1)
+            {
+                default: { break; }
+                case 1:
+                    {
+                        switch (val2)
+                        {
+                            default:
+                                {
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    Uppgift1_1_WaterBoil();
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    Uppgift1_2_PekkasPonnys();
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    Uppgift1_3_GårDetAttBada();
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        switch (val2)
+                        {
+                            default:
+                                {
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    Uppgift2_1_FizzBuzz();
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    Uppgift2_2_KortLeken();
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+                case 3:
+                    {
+                        switch (val2)
+                        {
+                            default:
+                                {                                 
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    Uppgift3_1_Quack();
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    Uppgift3_2_MjauMachine();
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+                case 4:
+                    {
+                        switch (val2)
+                        {
+                            default:
+                                {
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    Uppgift4_1_Box_a();
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    Uppgift4_1_Box_b();
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    Uppgift4_1_Box_c();
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    Uppgift4_1_Box_d();
+                                    break;
+                                }
+                            case 5:
+                                {
+                                    Uppgift4_1_Box_e();
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    Uppgift4_1_Box_f();
+                                    break;
+                                }
+                        }
+                        break;
+                    }
 
+            }
+        }
+        private static int abcdef(string s)
+        {
+            int returning = 0;
+            int.TryParse(s, out returning);
+            switch (s)
+            {
+                default:
+                    { break; }
+                case "a":
+                    {
+                        returning = 1;
+                        break;
+                    }
+                case "b":
+                    {
+                        returning = 2;
+                        break;
+                    }
+                case "c":
+                    {
+                        returning = 3;
+                        break;
+                    }
+                case "d":
+                    {
+                        returning = 4;
+                        break;
+                    }
+                case "e":
+                    {
+                        returning = 5;
+                        break;
+                    }
+                case "f":
+                    {
+                        returning = 6;
+                        break;
+                    }
+               }
+            
+            return returning;
         }
     }
 }
