@@ -16,7 +16,7 @@ namespace Labboration2ChristianJ
         static void Main(string[] args)
         {
 
-            mainMenu();
+            miniMain(0);
             ////Selektion
             //Uppgift1_1_WaterBoil();
             //Uppgift1_2_PekkasPonnys();
@@ -59,6 +59,7 @@ namespace Labboration2ChristianJ
             ////oxoo
             ////xooo
             Console.ReadKey();
+
         }
 
         
@@ -392,18 +393,17 @@ namespace Labboration2ChristianJ
         #endregion
 
         #endregion
-        private static void mainMenu()
-        {
-            while ((0<=menuChoice1 && menuChoice1 <=4))
-            {
-                menuChoice1 = miniMain(menuChoice1);
-            }
-                
-            
-            
-        }
+        //private static void mainMenu()
+        //{
+        //    while ((0<=menuChoice1 && menuChoice1 <=4))
+        //    {
+        //        menuChoice1 = miniMain(menuChoice1);
+        //    }
+                  
+        //}
         private static int miniMain(int val1)
         {
+            Console.Clear();
             Console.WriteLine("Vilket program vill du köra? Avsluta med #");
             Console.WriteLine("#1. Selektion (3 Options)");
             if (val1 == 1)
@@ -428,27 +428,29 @@ namespace Labboration2ChristianJ
             if (val1 == 4)
             {
                 Console.WriteLine("\t#4.a Even");
-                Console.WriteLine("\t#4.b");
-                Console.WriteLine("\t#4.c x kolumns");
-                Console.WriteLine("\t#4.d x rows");
+                Console.WriteLine("\t#4.b Triangle");
+                Console.WriteLine("\t#4.c x Columns");
+                Console.WriteLine("\t#4.d x Rows");
                 Console.WriteLine("\t#4.e Backslash");
                 Console.WriteLine("\t#4.f Slash");
             }
             if (val1 == 0)
             {
-                Console.Write("Vilken grupp vill du gå in i? ");
+                Console.Write("Vilken grupp vill du gå in i? Avsluta med ickekorrekt siffra:  ");
                 //Console.Write(val1 + ".");
                 int.TryParse(Console.ReadLine(), out val1);
-                Console.Clear();
+                
+                miniMain(val1);
             }
-            else
+            else if((0 <= val1 && val1 <= 4))
             {
                 Console.Write("Vilken undermeny vill du gå in i? {0}:",val1);
                 choiceRunner(val1,abcdef(Console.ReadLine()));
                 Console.ReadKey();
-                Console.Clear();
-                val1 = 0;
+                miniMain(0);
             }
+            Console.Clear();
+            Console.WriteLine("Hej då!!");
             return val1;
         }
         private static void choiceRunner(int val1, int val2)
