@@ -451,6 +451,8 @@ namespace Labboration2ChristianJ
             }
             Console.Clear();
             Console.WriteLine("Hej då!!");
+            System.Threading.Thread.Sleep(100);
+           
             return val1;
         }
         private static void choiceRunner(int val1, int val2)
@@ -612,5 +614,7 @@ namespace Labboration2ChristianJ
             
             return returning;
         }
+        
+        
     }
 }
