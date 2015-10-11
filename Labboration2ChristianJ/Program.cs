@@ -466,6 +466,7 @@ namespace Labboration2ChristianJ
                         {
                             default:
                                 {
+                                    Console.WriteLine("Incorrect input, start over...");
                                     break;
                                 }
                             case 1:
@@ -492,6 +493,7 @@ namespace Labboration2ChristianJ
                         {
                             default:
                                 {
+                                    Console.WriteLine("Incorrect input, start over...");
                                     break;
                                 }
                             case 1:
@@ -512,7 +514,8 @@ namespace Labboration2ChristianJ
                         switch (val2)
                         {
                             default:
-                                {                                 
+                                {
+                                    Console.WriteLine("Incorrect input, start over...");
                                     break;
                                 }
                             case 1:
@@ -534,6 +537,7 @@ namespace Labboration2ChristianJ
                         {
                             default:
                                 {
+                                    Console.WriteLine("Incorrect input, start over...");
                                     break;
                                 }
                             case 1:
