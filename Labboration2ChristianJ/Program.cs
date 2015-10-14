@@ -17,47 +17,7 @@ namespace Labboration2ChristianJ
         {
 
             miniMain(0);
-            ////Selektion
-            //Uppgift1_1_WaterBoil();
-            //Uppgift1_2_PekkasPonnys();
-            //Uppgift1_3_GårDetAttBada();
-            ////Iteration-For
-            //Uppgift2_1_FizzBuzz();
-            //Uppgift2_2_KortLeken();
-            ////Iteration-While
-            //Uppgift3_1_Quack();
-            //Uppgift3_2_MjauMachine();
-            ////Valfri Loop
-            //Uppgift4_1_Box_a();
-            ////oooo
-            ////oooo
-            ////oooo
-            ////oooo
-            //Uppgift4_1_Box_b();
-            ////oooo
-            ////ooo
-            ////oo
-            ////o
-            //Uppgift4_1_Box_c();
-            ////xoxo
-            ////xoxo
-            ////xoxo
-            ////xoxo
-            //Uppgift4_1_Box_d();
-            ////xxxx
-            ////oooo
-            ////xxxx
-            ////oooo
-            //Uppgift4_1_Box_e();
-            ////xooo
-            ////oxoo
-            ////ooxo
-            ////ooox
-            //Uppgift4_1_Box_f();
-            ////ooox
-            ////ooxo
-            ////oxoo
-            ////xooo
+
             Console.ReadKey();
 
         }
@@ -393,15 +353,8 @@ namespace Labboration2ChristianJ
         #endregion
 
         #endregion
-        //private static void mainMenu()
-        //{
-        //    while ((0<=menuChoice1 && menuChoice1 <=4))
-        //    {
-        //        menuChoice1 = miniMain(menuChoice1);
-        //    }
-                  
-        //}
-        private static int miniMain(int val1)
+        
+        private static void miniMain(int val1)
         {
             Console.Clear();
             Console.WriteLine("Vilket program vill du köra? Avsluta med #");
@@ -451,9 +404,7 @@ namespace Labboration2ChristianJ
             }
             Console.Clear();
             Console.WriteLine("Hej då!!");
-            System.Threading.Thread.Sleep(100);
-           
-            return val1;
+            
         }
         private static void choiceRunner(int val1, int val2)
         {
